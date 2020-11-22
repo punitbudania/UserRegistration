@@ -4,22 +4,21 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class EmailID 
+public class MobileNo
 {
-	public static void email()
+	public static void mobile()
 	{
 		Scanner firstname = new Scanner(System.in);
 		
-		String any = "^([a-z]{3})([+_.-]?[0-9a-z]{3,})?([@][0-9a-z]{1,})([.][a-z]{2,})([.][a-z]{2,})?";
+		String any = "[0-9]{2}\\s[0-9]{10}";
 		Pattern pattern = Pattern.compile(any, Pattern.MULTILINE);
 		Matcher matcher = pattern.matcher(firstname.next());
 		boolean found = false;
 		
 		while(matcher.find())
 		{
-			System.out.println("Enter MobileNo:");
-			MobileNo contact = new MobileNo();
-			contact.mobile();
+			System.out.println("Enter Password:");
+			
 			found = true;
 		}
 		
