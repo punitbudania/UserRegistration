@@ -10,7 +10,7 @@ public class UserRegistration
 		Scanner firstname = new Scanner(System.in);
 		
 		String any = "^[A-Z][a-z]{2,}";
-		Pattern pattern = Pattern.compile(any, Pattern.MULTILINE);
+		Pattern pattern = Pattern.compile(any);
 		System.out.println("Enter FirstName:");
 		Matcher matcher = pattern.matcher(firstname.next());
 		boolean found = false;
@@ -28,4 +28,7 @@ public class UserRegistration
 			System.out.println("Invalid!! Try Again");
 		}
 	}
+	
+	
+	
 }

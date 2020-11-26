@@ -10,9 +10,9 @@ public class MobileNo
 	{
 		Scanner firstname = new Scanner(System.in);
 		
-		String any = "[0-9]{2}\\s[0-9]{10}";
+		String any = "[91]{2}\\s[789]{1}[0-9]{9}";
 		Pattern pattern = Pattern.compile(any, Pattern.MULTILINE);
-		Matcher matcher = pattern.matcher(firstname.next());
+		Matcher matcher = pattern.matcher(firstname.nextLine());
 		boolean found = false;
 		
 		while(matcher.find())

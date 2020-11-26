@@ -10,7 +10,7 @@ public class Password
 	{
 		Scanner firstname = new Scanner(System.in);
 		
-		String any = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\\\S+$).{8, 20}$";
+		String any = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#%&-+=()])(?=\\S+$).{8,}$";
 		Pattern pattern = Pattern.compile(any, Pattern.MULTILINE);
 		Matcher matcher = pattern.matcher(firstname.next());
 		boolean found = false;
